@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2015-07-20 11:23:58
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2017-11-01 18:59:07
+# @Last Modified time: 2017-11-05 16:40:43
 
 module Parameter
 
@@ -36,6 +36,7 @@ module Parameter
       check_constraints_for_i
     end
 
+    # private method to validate the given input filepaths
     def validate_filepaths
       repository.parameters[:file].each { |path|
         check_for_valid_filepath(path)
