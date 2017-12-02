@@ -39,4 +39,4 @@ following the conditions found [here](ftp://ftp-cdc.dwd.de/pub/CDC/Nutzungsbedin
 * statistic evaluations between the forecast data and the used observation data
 * visualization of the results using additional tools like gnuplot or R
 
-created by: Benjamin Held
+created by: Benjamin Held, October 2017
