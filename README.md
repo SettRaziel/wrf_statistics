@@ -2,7 +2,7 @@
 
 This project holds a collection of ruby files which evaluate the forecasts 
 generated with my wrf model. Initially the wrf output for a given location
-will be compared with oberservation data from the german weather service (DWD).
+will be compared with observation data from the german weather service (DWD).
 
 Current version: v0.0.1
 
@@ -18,7 +18,7 @@ The documentation will be created with yard and published at a later point.
 Written with Ruby 2.4.0
 
 ## Tested
-* Linux: running on Archlinux with Ruby > 2.4.0
+* Linux: running on ArchLinux with Ruby > 2.4.0
 * Windows: not tested
 * MAC: not tested
 
