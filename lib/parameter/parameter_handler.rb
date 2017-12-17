@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2015-07-20 11:23:58
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2017-11-05 16:40:43
+# @Last Modified time: 2017-12-17 17:20:17
 
 module Parameter
 
@@ -33,7 +33,7 @@ module Parameter
 
     # private method to the specified parameter constraints
     def check_parameter_constraints
-      check_constraints_for_i
+      check_constraints_for_i if (repository.parameters[:interval])
     end
 
     # private method to validate the given input filepaths
@@ -72,7 +72,7 @@ module Parameter
     # checks constraints that an interval entry exists
     # @raise [ArgumentError] if no interval symbol has been read
     def check_constraints_for_i
-      if (!repository.parameters[:interval])
+      if (!repository.parameters[:interval] && !repository.parameters[:help])
         raise ArgumentError,
               " Error: No time interval has been specified."
       end
