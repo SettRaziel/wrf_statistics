@@ -36,6 +36,8 @@ following the conditions found [here](ftp://ftp-cdc.dwd.de/pub/CDC/Nutzungsbedin
 
 ## Roadmap
 * parsing scripts to read the data files and extract the necessary informations
+* starting script to calculate plots for a given input file
+* different input data: wrf output data and wrf observation data
 * statistic evaluations between the forecast data and the used observation data
 * visualization of the results using additional tools like gnuplot or R
 
