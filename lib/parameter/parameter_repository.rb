@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2015-06-12 10:45:36
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2017-12-19 18:05:28
+# @Last Modified time: 2018-01-09 21:17:31
 
 # Parent module which holdes the classes dealing with reading and validating
 # the provided input parameters
@@ -20,8 +20,7 @@ module Parameter
     # @raise [ArgumentError] for an invalid combination of script parameters
     def initialize(argv)
       @parameters = Hash.new()
-      unflagged_arguments = Array.new()
-      create_two_argument_entry(:files, unflagged_arguments)
+      unflagged_arguments = [:file]
       has_read_file = false
       argv.each { |arg|
         has_read_file?(has_read_file)
@@ -44,6 +43,10 @@ module Parameter
         when '-v', '--version' then @parameters[:version] = true
         when '-i', '--interval'
           create_two_argument_entry(:interval, unflagged_arguments)
+        when '-c', '--compare' 
+          create_two_argument_entry(:compare, unflagged_arguments)
+        when '-t', '--type'
+          create_argument_entry(:type, unflagged_arguments)
         when /-[a-z]|--[a-z]+/ then raise_invalid_parameter(arg)
       else
         check_and_set_argument(unflagged_arguments.shift, arg)
@@ -87,7 +90,7 @@ module Parameter
     # checks if the help parameter was entered with a parameter of if the
     # general help information is requested
     def check_and_set_helpvalue
-      if(@parameters.keys.last != :files)
+      if(@parameters.keys.last != nil)
         # help in context to a parameter
         @parameters[:help] = @parameters.keys.last
       else
@@ -103,7 +106,7 @@ module Parameter
     #  following
     def has_read_file?(read_file)
       if (read_file)
-          raise ArgumentError, " Error: found filepath: #{@parameters[:files]}," \
+          raise ArgumentError, " Error: found filepath: #{@parameters[:file]}," \
                                " but there are other arguments left."
       end
     end
