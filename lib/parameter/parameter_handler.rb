@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2015-07-20 11:23:58
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2017-12-17 17:20:17
+# @Last Modified time: 2018-01-10 19:52:38
 
 module Parameter
 
@@ -26,26 +26,21 @@ module Parameter
 
     # private method with calls of the different validations methods
     def validate_parameters
-      check_for_valid_filepath if (repository.parameters[:file])
+      check_for_valid_filepath if (@repository.parameters[:file])
 
       check_number_of_parameters(:interval, 2)
+      check_number_of_parameters(:compare, 2)
     end
 
     # private method to the specified parameter constraints
     def check_parameter_constraints
-      check_constraints_for_i if (repository.parameters[:interval])
-    end
-
-    # private method to validate the given input filepaths
-    def validate_filepaths
-      repository.parameters[:file].each { |path|
-        check_for_valid_filepath(path)
-      }
+      # none at the moment
     end
 
     # checks if the parsed filename is a valid unix or windows file name
     # @raise [ArgumentError] if filepath is not valid
-    def check_for_valid_filepath(filepath)
+    def check_for_valid_filepath
+      filepath = @repository.parameters[:file]
       unixfile_regex= %r{
         \A                       # start of string
         ((\.\/)|(\.\.\/)+|(\/))? # relativ path or upwards or absolute
@@ -69,23 +64,14 @@ module Parameter
       end
     end
 
-    # checks constraints that an interval entry exists
-    # @raise [ArgumentError] if no interval symbol has been read
-    def check_constraints_for_i
-      if (!repository.parameters[:interval] && !repository.parameters[:help])
-        raise ArgumentError,
-              " Error: No time interval has been specified."
-      end
-    end
-
     # checks the correct number of parameters for the given key
     # @param [Symbol] key the key of a parameter
     # @param [Integer] count_parameters the number of arguments for this
     #  parameter
     # @raise [IndexError] if the number of arguments for the parameter is invalid
     def check_number_of_parameters(key, count_parameters)
-      if (repository.parameters[key] && !repository.parameters[:help])
-        value = repository.parameters[key]
+      if (@repository.parameters[key] && !@repository.parameters[:help])
+        value = @repository.parameters[key]
         if (value.size != count_parameters)
           raise IndexError,
             " Error: invalid number of parameters for option: #{key} "
@@ -99,7 +85,7 @@ module Parameter
     # @param [Symbol] symbol the literal to check
     # @raise [ArgumentError] if the second parameter is not present
     def check_occurrence(p, r, symbol)
-      if (!repository.parameters[symbol])
+      if (!@repository.parameters[symbol])
         raise ArgumentError,
               " Error: #{p} requires the parameters of #{r}"
       end
