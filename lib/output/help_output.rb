@@ -1,9 +1,9 @@
 # @Author: Benjamin Held
 # @Date:   2016-01-18 14:29:41
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2017-12-14 20:38:35
+# @Last Modified time: 2018-01-30 13:46:38
 
-require_relative 'string'
+require_relative '../string/string'
 
 # Output class for help text
 class HelpOutput
