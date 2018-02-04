@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2017-11-01 18:11:38
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2017-11-04 18:45:16
+# @Last Modified time: 2018-02-04 17:24:16
 
 module Wrf
 
@@ -9,38 +9,38 @@ module Wrf
   class WrfEntry
 
     # @return [Date] forecast time in hours
-    attr :time   
+    attr_accessor :forecast_time   
     # @return [Float] 2 m Temperature (K)
-    attr :air_temperature
+    attr_accessor :air_temperature
     # @return [Float] 2 m vapor mixing ratio (kg/kg)
-    attr :mixing_ratio
+    attr_accessor :mixing_ratio
     # @return [Float] 10 m U wind (earth-relative)
-    attr :u_wind
+    attr_accessor :u_wind
     # @return [Float] 10 m V wind (earth-relative)
-    attr :v_wind
+    attr_accessor :v_wind
     # @return [Float] surface pressure (Pa)
-    attr :pressure
+    attr_accessor :pressure
     # @return [Float] downward longwave radiation flux at the ground 
     #                 (W/m^2, downward is positive)
-    attr :longwave
+    attr_accessor :longwave
     # @return [Float] net shortwave radiation flux at the ground 
     #                 (W/m^2, downward is positive)
-    attr :shortwave         
+    attr_accessor :shortwave         
     # @return [Float] surface sensible heat flux (W/m^2, upward is positive)
-    attr :sensible_heat     
+    attr_accessor :sensible_heat     
     # @return [Float] surface latent heat flux (W/m^2, upward is positive)
-    attr :latent_heat       
+    attr_accessor :latent_heat       
     # @return [Float] skin temperature (K)
-    attr :skin_temperature  
+    attr_accessor :skin_temperature  
     # @return [Float] top soil layer temperature (K)
-    attr :soil_temperature  
+    attr_accessor :soil_temperature  
     # @return [Float] rainfall from a cumulus scheme (mm) 
-    attr :cumulus_rainfall  
+    attr_accessor :cumulus_rainfall  
     # @return [Float] rainfall from an explicit scheme (mm)
-    attr :explicit_rainfall 
+    attr_accessor :explicit_rainfall 
     # @return [Float] total column-integrated water vapor and cloud variables
-    attr :water_vapor
+    attr_accessor :water_vapor
 
   end
 
-end  
+end
