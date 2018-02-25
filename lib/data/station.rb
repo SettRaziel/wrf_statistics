@@ -1,10 +1,11 @@
 # @Author: Benjamin Held
 # @Date:   2017-11-05 20:15:57
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2018-01-03 20:25:12
+# @Last Modified time: 2018-02-25 20:23:56
 
 require_relative 'coordinate.rb'
 
+# Simple data class to represent a station entity
 class Station
 
   # @return [String] the name of the station
