@@ -1,8 +1,7 @@
-#!/usr/bin/ruby
 # @Author: Benjamin Held
 # @Date:   2018-01-27 16:45:47
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2018-02-26 20:57:04
+# @Last Modified time: 2018-03-18 21:54:38
 
 # This module holds the classes that describe the meta information for the
 # different data sets.
