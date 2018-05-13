@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2018-01-27 16:45:47
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2018-03-18 21:54:38
+# @Last Modified time: 2018-05-13 17:27:18
 
 # This module holds the classes that describe the meta information for the
 # different data sets.
@@ -23,7 +23,7 @@ module MetaData
     # initialization
     # @param [String] header_line the head line of a data set holding the 
     # relevant meta information
-    # qparam [Date] start_date the start date of the data set
+    # @param [Date] start_date the start date of the data set
     def initialize(header_line, start_date)
       @start_date = start_date
       parse_header(header_line)
