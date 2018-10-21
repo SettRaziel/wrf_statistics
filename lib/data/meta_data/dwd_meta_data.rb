@@ -1,8 +1,7 @@
-#!/usr/bin/ruby
 # @Author: Benjamin Held
 # @Date:   2018-05-03 19:30:27
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2018-06-29 22:19:20
+# @Last Modified time: 2018-10-21 21:03:30
 
 module MetaData
 
