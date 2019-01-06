@@ -1,4 +1,5 @@
 # WRF Statistics
+[![Maintainability](https://api.codeclimate.com/v1/badges/92c4157d448e53d79ca3/maintainability)](https://codeclimate.com/github/SettRaziel/wrf_statistics/maintainability)
 
 This project holds a collection of ruby files which evaluate the forecasts 
 generated with my wrf model. Initially the wrf output for a given location
