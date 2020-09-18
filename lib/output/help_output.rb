@@ -1,9 +1,9 @@
 # @Author: Benjamin Held
 # @Date:   2016-01-18 14:29:41
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2018-01-30 13:46:38
+# @Last Modified time: 2020-09-18 22:01:19
 
-require_relative '../string/string'
+require 'ruby_utils/string'
 
 # Output class for help text
 class HelpOutput
