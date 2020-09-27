@@ -1,7 +1,7 @@
 # @Author: Benjamin Held
 # @Date:   2016-01-18 14:29:41
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2020-09-27 20:39:14
+# @Last Modified time: 2020-09-27 20:55:00
 
 require "ruby_utils/help_output"
 
@@ -26,8 +26,8 @@ module WrfStatistic
 
     # method to specify and add the help entries with help text and two arguments
     def self.add_two_argument_help_entries
-      add_dual_argument_text(:compare, " -c, --compare    ", " <first> <second>", "; <to do>")
-      add_dual_argument_text(:interval, " -i, --inteval    ", " <first> <second>", "; <to do>")
+      add_dual_argument_text(:compare, " -c, --compare  ", " <first> <second>", "; <to do>")
+      add_dual_argument_text(:interval, " -i, --interval ", " <first> <second>", "; <to do>")
       nil
     end
 
