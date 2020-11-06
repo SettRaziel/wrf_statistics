@@ -33,7 +33,7 @@ or data are marked and can have different license conditions.
 Please check the folders for subsidiary license files.
 
 The oberservation data from the german weather service is proteced. They can be used
-following the conditions found [here](ftp://ftp-cdc.dwd.de/pub/CDC/Nutzungsbedingungen_German.pdf).
+following the conditions found [here](https://opendata.dwd.de/climate_environment/CDC/Nutzungsbedingungen_German.pdf).
 
 ## Roadmap
 * parsing scripts to read the data files and extract the necessary informations
