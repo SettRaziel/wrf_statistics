@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/SettRaziel/dwd_observations
+  revision: db8098e3abfece95f97e6b830f9a96561828aa53
+  specs:
+    dwd_observations (0.1.0)
+
+GIT
   remote: https://github.com/SettRaziel/ruby_utils
   revision: 37ae9320dc916956ede5fa4ea09b428cab7340a7
   specs:
@@ -40,6 +46,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dwd_observations!
   rake (~> 13.0, >= 13.0.1)
   rspec (~> 3.9, >= 3.9.0)
   ruby_utils!
