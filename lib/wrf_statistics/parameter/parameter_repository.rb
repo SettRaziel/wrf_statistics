@@ -1,11 +1,11 @@
 # @Author: Benjamin Held
 # @Date:   2015-06-12 10:45:36
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2020-09-19 21:46:32
+# @Last Modified time: 2020-12-04 19:41:54
 
 module WrfStatistic
 
-  # Parent module which holdes the classes dealing with reading and validating
+  # Parent module which holds the classes dealing with reading and validating
   # the provided input parameters
   module Parameter
 
