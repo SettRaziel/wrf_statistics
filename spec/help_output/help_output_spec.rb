@@ -2,7 +2,7 @@
 # @Author: Benjamin Held
 # @Date:   2020-03-16 20:59:23
 # @Last Modified by:   Benjamin Held
-# @Last Modified time: 2020-09-27 20:56:21
+# @Last Modified time: 2021-02-17 14:04:08
 
 require "spec_helper"
 require "wrf_statistics/help/help_output"
@@ -56,6 +56,8 @@ describe WrfStatistic::HelpOutput do
                     "WRF statistics help:".light_yellow + "\n" + \
                     " -h, --help     ".light_blue + "show help text\n" + \
                     " -v, --version  ".light_blue + "prints the current version of the project\n" + \
+                    " -f, --file     ".light_blue + "argument:".red + " <file>".yellow  + \
+                    "; optional parameter that indicates a filepath to a readable file\n" + \
                     " -t, --type     ".light_blue + "argument:".red + " <type>".yellow  + \
                     "; specifies the measurand type that should be evaluated\n" + \
                     " -c, --compare  ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
