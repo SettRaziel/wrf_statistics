@@ -1,8 +1,3 @@
-# @Author: Benjamin Held
-# @Date:   2016-01-18 14:29:41
-# @Last Modified by:   Benjamin Held
-# @Last Modified time: 2020-09-27 20:55:00
-
 require "ruby_utils/help_output"
 
 module WrfStatistic

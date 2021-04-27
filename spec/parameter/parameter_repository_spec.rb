@@ -1,9 +1,3 @@
-#!/usr/bin/ruby
-# @Author: Benjamin Held
-# @Date:   2020-03-16 20:11:41
-# @Last Modified by:   Benjamin Held
-# @Last Modified time: 2021-02-17 14:02:00
-
 require "spec_helper"
 require "wrf_statistics/parameter"
 
