@@ -1,6 +1,6 @@
-require 'ruby_utils/string'
-require 'wrf_statistics/parameter'
-require_relative '../lib/wrf_statistics'
+require "ruby_utils/string"
+require "wrf_statistics/parameter"
+require_relative "../lib/wrf_statistics"
 
 begin
   WrfStatistic.initialize(ARGV)

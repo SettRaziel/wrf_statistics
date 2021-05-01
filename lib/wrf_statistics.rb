@@ -47,8 +47,8 @@ module WrfStatistic
 
   # call to print version number and author
   def self.print_version
-    puts 'wrf_statistics version 0.0.1'.yellow
-    puts 'Created by Benjamin Held (October 2017)'.yellow
+    puts "wrf_statistics version 0.0.1".yellow
+    puts "Created by Benjamin Held (October 2017)".yellow
     nil
   end
 
@@ -56,7 +56,7 @@ module WrfStatistic
   # @param [String] message message string with error message
   def self.print_error(message)
     puts "#{message}".red
-    puts 'For help type: ruby <script> --help'.green
+    puts "For help type: ruby <script> --help".green
     nil
   end
 
