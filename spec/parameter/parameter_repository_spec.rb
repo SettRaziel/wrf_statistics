@@ -3,6 +3,26 @@ require "wrf_statistics/parameter"
 
 describe WrfStatistic::Parameter::ParameterRepository do
 
+    describe ".new" do
+    context "given the one element date flag" do
+      it "create the repository with the correct flags" do
+        arguments = ["-d", "2020-06-29", "-f", "filename"]
+        parameter_repository = WrfStatistic::Parameter::ParameterRepository.new(arguments)
+        expect(parameter_repository.parameters[:date]).to eq("2020-06-29")
+      end
+    end
+  end
+
+  describe ".new" do
+    context "given the one element date flag" do
+      it "create the repository with the correct flags" do
+        arguments = ["--date", "2021-06-29", "--file", "filename"]
+        parameter_repository = WrfStatistic::Parameter::ParameterRepository.new(arguments)
+        expect(parameter_repository.parameters[:date]).to eq("2021-06-29")
+      end
+    end
+  end
+
   describe ".new" do
     context "given the type flag as parameter" do
       it "set the flag for type output" do

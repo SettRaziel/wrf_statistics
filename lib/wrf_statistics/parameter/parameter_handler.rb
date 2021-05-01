@@ -27,7 +27,11 @@ module WrfStatistic
 
       # private method to the specified parameter constraints
       def check_parameter_constraints
-        # none at the moment
+        # check mandatory date parameter
+        check_mandatory_parameter(:date)
+
+        # check mandatory file parameter
+        check_mandatory_parameter(:file)
       end
 
     end

@@ -16,8 +16,9 @@ module WrfStatistic
       # @param [Array] unflagged_arguments the argument array
       def process_argument(arg)
         case arg
-          when *@mapping[:interval]   then create_two_argument_entry(:interval)
           when *@mapping[:compare]    then create_two_argument_entry(:compare)
+          when *@mapping[:date]       then create_argument_entry(:date)
+          when *@mapping[:interval]   then create_two_argument_entry(:interval)
           when *@mapping[:type]       then create_argument_entry(:type)
           when /-[a-z]|--[a-z]+/ then raise_invalid_parameter(arg)
         else
@@ -28,9 +29,10 @@ module WrfStatistic
 
       # method to define the input string values that will match a given paramter symbol
       def define_mapping
-        @mapping[:compare] = ['-c', '--compare']
-        @mapping[:interval] = ['-i', '--interval']
-        @mapping[:type] = ['-t', '--type']
+        @mapping[:compare]  = ["-c", "--compare"]
+        @mapping[:date]     = ["-d", "--date"]
+        @mapping[:interval] = ["-i", "--interval"]
+        @mapping[:type]     = ["-t", "--type"]
       end
 
     end
