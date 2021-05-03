@@ -14,6 +14,10 @@ module WrfStatistic
 
     # method to specify and add the help entries with help text and one argument
     def self.add_one_argument_help_entries
+      add_single_argument_text(:date, " -d, --date     ", " <date>",
+            "; specifies the start_date of the given forecast")
+      add_single_argument_text(:file, " -f, --file     ", " <file>",
+            "; parameter that indicates a filepath to a readable file")
       add_single_argument_text(:type, " -t, --type     ", " <type>",
             "; specifies the measurand type that should be evaluated")
       nil

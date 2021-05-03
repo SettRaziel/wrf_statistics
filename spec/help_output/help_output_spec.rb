@@ -46,6 +46,30 @@ describe WrfStatistic::HelpOutput do
   end
 
   describe "#print_help_for" do
+    context "given a one element help entry" do
+      it "print the help text for :date" do
+        expect { 
+          WrfStatistic::HelpOutput.print_help_for(:date) 
+        }.to output("WRF statistics help:".light_yellow + "\n" + \
+                    " -d, --date     ".light_blue + "argument:".red + " <date>".yellow  + \
+                    "; specifies the start_date of the given forecast\n").to_stdout
+      end
+    end
+  end
+
+  describe "#print_help_for" do
+    context "given a one element help entry" do
+      it "print the help text for :file" do
+        expect { 
+          WrfStatistic::HelpOutput.print_help_for(:file) 
+        }.to output("WRF statistics help:".light_yellow + "\n" + \
+                    " -f, --file     ".light_blue + "argument:".red + " <file>".yellow  + \
+                    "; parameter that indicates a filepath to a readable file\n").to_stdout
+      end
+    end
+  end
+
+  describe "#print_help_for" do
     context "given a to whole help text" do
       it "print the help text for the script" do
         expect { 
@@ -57,7 +81,9 @@ describe WrfStatistic::HelpOutput do
                     " -h, --help     ".light_blue + "show help text\n" + \
                     " -v, --version  ".light_blue + "prints the current version of the project\n" + \
                     " -f, --file     ".light_blue + "argument:".red + " <file>".yellow  + \
-                    "; optional parameter that indicates a filepath to a readable file\n" + \
+                    "; parameter that indicates a filepath to a readable file\n" + \
+                    " -d, --date     ".light_blue + "argument:".red + " <date>".yellow  + \
+                    "; specifies the start_date of the given forecast\n" + \
                     " -t, --type     ".light_blue + "argument:".red + " <type>".yellow  + \
                     "; specifies the measurand type that should be evaluated\n" + \
                     " -c, --compare  ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
