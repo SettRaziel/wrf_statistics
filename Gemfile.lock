@@ -6,22 +6,22 @@ GIT
 
 GIT
   remote: https://github.com/SettRaziel/ruby_utils
-  revision: 72e0fd0baf4e82a628f23f3d59c525f88a6a87dd
+  revision: 6ba4d9a76f338b6ae1f6fb0472d56f193d50bab2
   specs:
-    ruby_utils (0.1.1)
+    ruby_utils (0.2.1)
 
 GIT
   remote: https://github.com/SettRaziel/wrf_library
-  revision: fe33b1ccc3e7954005d4cc1aee2bf62755314d9f
+  revision: 301c0e66d049e90fddf5acd19c6d2da3f5d3cad3
   specs:
-    wrf_library (0.3.1)
-      ruby_utils (~> 0.1.0, >= 0.1.0)
+    wrf_library (0.5.2)
+      ruby_utils (~> 0.2.0, >= 0.1.0)
 
 PATH
   remote: .
   specs:
     wrf_statistics (0.0.1)
-      wrf_library (~> 0.3.0, >= 0.3.0)
+      wrf_library (>= 0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -47,8 +47,8 @@ PLATFORMS
 
 DEPENDENCIES
   dwd_observations!
-  rake (~> 13.0, >= 13.0.1)
-  rspec (~> 3.9, >= 3.9.0)
+  rake (>= 13.0.1)
+  rspec (>= 3.9.0)
   ruby_utils!
   wrf_library!
   wrf_statistics!
