@@ -15,7 +15,7 @@ describe WrfStatistic::HelpOutput do
         expect { 
           WrfStatistic::HelpOutput.print_help_for(:type) 
         }.to output("WRF statistics help:".light_yellow + "\n" + \
-                    " -t, --type     ".light_blue + "argument:".red + " <type>".yellow  + \
+                    " -t, --type      ".light_blue + "argument:".red + " <type>".yellow  + \
                     "; specifies the measurand type that should be evaluated\n").to_stdout
       end
     end
@@ -27,7 +27,7 @@ describe WrfStatistic::HelpOutput do
         expect { 
           WrfStatistic::HelpOutput.print_help_for(:compare) 
         }.to output("WRF statistics help:".light_yellow + "\n" + \
-                    " -c, --compare  ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
+                    " -c, --compare   ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
                     "; <to do>\n").to_stdout
       end
     end
@@ -39,7 +39,7 @@ describe WrfStatistic::HelpOutput do
         expect { 
           WrfStatistic::HelpOutput.print_help_for(:interval) 
         }.to output("WRF statistics help:".light_yellow + "\n" + \
-                    " -i, --interval ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
+                    " -i, --interval  ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
                     "; <to do>\n").to_stdout
       end
     end
@@ -51,7 +51,7 @@ describe WrfStatistic::HelpOutput do
         expect { 
           WrfStatistic::HelpOutput.print_help_for(:date) 
         }.to output("WRF statistics help:".light_yellow + "\n" + \
-                    " -d, --date     ".light_blue + "argument:".red + " <date>".yellow  + \
+                    " -d, --date      ".light_blue + "argument:".red + " <date>".yellow  + \
                     "; specifies the start_date of the given forecast\n").to_stdout
       end
     end
@@ -63,7 +63,7 @@ describe WrfStatistic::HelpOutput do
         expect { 
           WrfStatistic::HelpOutput.print_help_for(:file) 
         }.to output("WRF statistics help:".light_yellow + "\n" + \
-                    " -f, --file     ".light_blue + "argument:".red + " <file>".yellow  + \
+                    " -f, --file      ".light_blue + "argument:".red + " <file>".yellow  + \
                     "; parameter that indicates a filepath to a readable file\n").to_stdout
       end
     end
@@ -78,17 +78,17 @@ describe WrfStatistic::HelpOutput do
                     "help usage :".green + "              ruby <script> (-h | --help)\n" + \
                     "help usage for parameter:".green + " ruby <script> <parameter> (-h | --help)\n" + \
                     "WRF statistics help:".light_yellow + "\n" + \
-                    " -h, --help     ".light_blue + "show help text\n" + \
-                    " -v, --version  ".light_blue + "prints the current version of the project\n" + \
-                    " -f, --file     ".light_blue + "argument:".red + " <file>".yellow  + \
+                    " -h, --help      ".light_blue + "show help text\n" + \
+                    " -v, --version   ".light_blue + "prints the current version of the project\n" + \
+                    " -f, --file      ".light_blue + "argument:".red + " <file>".yellow  + \
                     "; parameter that indicates a filepath to a readable file\n" + \
-                    " -d, --date     ".light_blue + "argument:".red + " <date>".yellow  + \
+                    " -d, --date      ".light_blue + "argument:".red + " <date>".yellow  + \
                     "; specifies the start_date of the given forecast\n" + \
-                    " -t, --type     ".light_blue + "argument:".red + " <type>".yellow  + \
+                    " -t, --type      ".light_blue + "argument:".red + " <type>".yellow  + \
                     "; specifies the measurand type that should be evaluated\n" + \
-                    " -c, --compare  ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
+                    " -c, --compare   ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
                     "; <to do>\n" + \
-                    " -i, --interval ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
+                    " -i, --interval  ".light_blue + "arguments:".red + " <first> <second>".yellow  + \
                     "; <to do>\n").to_stdout
       end
     end
